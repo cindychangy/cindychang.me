@@ -1,4 +1,4 @@
-# cindychang.co
+# cindychang.me
 This is the website for the portfolio of cindychang.co
 
 ## Installation
