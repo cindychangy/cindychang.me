@@ -96,6 +96,7 @@ h6 {
 
 h1 {
   font-size: 3rem;
+  line-height: 1.1;
 
   @media (min-width: 768px) {
     font-size: 10rem;
@@ -155,9 +156,11 @@ h2 {
 
   .intro {
     order: 1;
+    margin-block-start: 3rem;
 
     @media (min-width: 768px) {
       order: 2;
+      margin-block-start: 6rem;
     }
 
     a {
