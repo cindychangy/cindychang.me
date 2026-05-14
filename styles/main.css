@@ -81,6 +81,10 @@ h1 {
   }
 }
 
+/**
+* Homepage
+**/
+
 .intro-container {
   width: 60ch;
   margin: auto;
@@ -102,13 +106,22 @@ h1 {
   }
 }
 
+/**
+* About Page
+**/
+
 #about {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
 
   .about-side {
-    width: 200px;
+    @media (min-width: 768px) {
+      width: 200px;
+    }
+
     font-size: 1.4rem;
 
     h1 {
@@ -124,14 +137,14 @@ h1 {
 }
 
 .about-container {
-  width: 60vw;
+  max-width: 100ch;
   margin: auto;
   min-height: 100vh;
+  padding: 1.6rem;
   margin-block-start: 6rem;
 
   @media (max-width: 768px) {
-    width: 100%;
-    padding: 1rem;
+    max-width: 100%;
     margin-block-start: 0;
   }
 }
@@ -146,6 +159,29 @@ h1 {
   }
 }
 
+.back-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 3.7rem;
+  height: 3.7rem;
+  background: #000;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0.75rem;
+  color: #fff;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+
+  &:hover {
+    background: #ecff22;
+    color: #000;
+  }
+}
 .work-summary {
   margin-block: 2rem;
   width: 20ch;
