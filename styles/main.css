@@ -1,0 +1,173 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:not(dialog) {
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Muli', sans-serif;
+  color: #111111;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+  margin-block-end: 1rem;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 6px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+
+  @media (max-width: 768px) {
+    font-size: 4rem;
+  }
+}
+
+.intro-container {
+  width: 60ch;
+  margin: auto;
+  min-height: 100vh;
+  margin-block-start: 6rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 1rem;
+    margin-block-start: 0;
+  }
+}
+
+#intro {
+  font-weight: 600;
+
+  p {
+    font-size: 1.4rem;
+  }
+}
+
+#about {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+  .about-side {
+    width: 200px;
+    font-size: 1.4rem;
+
+    h1 {
+      font-size: 1.4rem;
+    }
+  }
+
+  .about-bio {
+    flex: 1;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+  }
+}
+
+.about-container {
+  width: 60vw;
+  margin: auto;
+  min-height: 100vh;
+  margin-block-start: 6rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 1rem;
+    margin-block-start: 0;
+  }
+}
+
+.contact-links {
+  margin-block-start: 2rem;
+  display: flex;
+  gap: 1.8rem;
+
+  a {
+    font-weight: 600;
+  }
+}
+
+.work-summary {
+  margin-block: 2rem;
+  width: 20ch;
+}
+
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: fade 0.3s ease out;
+}
+
+::view-transition-new(root) {
+  animation: fade 0.3s ease in;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
